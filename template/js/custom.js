@@ -97,6 +97,29 @@ $(function(){
         data: country
     });
 
+    // Owl Section owlHeader
+    $('#owlHeader').owlCarousel({
+        rtl:true,
+        autoplaySpeed: 500,
+        animateOut:'fadeOut',
+        autoplay:true,
+        loop:true,
+        margin:0,
+        nav:true,
+        dots:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:1
+            }
+        }
+    });
+
     // Owl Section News
     $('#News').owlCarousel({
         loop:true,
@@ -116,6 +139,14 @@ $(function(){
                 items:3
             }
         }
+    });
+
+    // Toggle Links In Page Why
+    $('.tabAbout .buttons a').click(function(e){
+        e.preventDefault();
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.' + $(this).data('toggle')).fadeIn();
+        $('.content').not('.' +$(this).data('toggle')).hide();
     });
 
     
