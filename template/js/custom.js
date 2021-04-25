@@ -1,8 +1,7 @@
 $(function(){
 
     'use strict';
-
-   $('.header .regist h3.op').on('click',function(event){
+    $('.header .regist .op').on('click',function(event){
         event.stopPropagation();
         $('.header .regist .select-op').fadeToggle();
     });
@@ -13,6 +12,67 @@ $(function(){
 
     $(document).on("click", function () {
         $(".header .regist .select-op").fadeOut();
+    });
+
+    // PlaY owl-imgs In Section owl-imgs
+    $('.owl-imgs .thumbnails img').on('click', function () {
+        $('.owl-imgs .master-img img').hide().attr('src' , $(this).attr('src')).fadeIn(500);
+    });
+
+    // Owl Section News
+    $('#News').owlCarousel({
+        loop:true,
+        margin:20,
+        dots:false,
+        nav:true,
+        rtl:true,
+        autoplay:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+    $('#owlStore').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        rtl:true,
+        autoplay:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:1
+            }
+        }
+    });
+    // Toggle Input Pluse And Minus
+    $(document).ready(function() {
+        $('.minus').click(function () {
+            var $input = $(this).parent().find('input');
+            var count = parseInt($input.val()) - 1;
+            count = count < 1 ? 1 : count;
+            $input.val(count);
+            $input.change();
+            return false;
+        });
+        $('.plus').click(function () {
+            var $input = $(this).parent().find('input');
+            $input.val(parseInt($input.val()) + 1);
+            $input.change();
+            return false;
+        });
     });
 
     // Select With Country
@@ -120,27 +180,6 @@ $(function(){
         }
     });
 
-    // Owl Section News
-    $('#News').owlCarousel({
-        loop:true,
-        margin:20,
-        dots:false,
-        nav:true,
-        rtl:true,
-        autoplay:true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:3
-            },
-            1000:{
-                items:3
-            }
-        }
-    });
-
     // Toggle Links In Page Why
     $('.tabAbout .buttons a').click(function(e){
         e.preventDefault();
@@ -148,6 +187,5 @@ $(function(){
         $('.' + $(this).data('toggle')).fadeIn();
         $('.content').not('.' +$(this).data('toggle')).hide();
     });
-
     
 });
