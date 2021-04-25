@@ -159,6 +159,36 @@ $(function(){
 
     // Owl Section owlHeader
     $('#owlHeader').owlCarousel({
+<<<<<<< HEAD
+=======
+        rtl:true,
+        autoplaySpeed: 500,
+        animateOut:'fadeOut',
+        autoplay:true,
+        loop:true,
+        margin:0,
+        nav:true,
+        dots:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:1
+            }
+        }
+    });
+
+    // Owl Section News
+    $('#News').owlCarousel({
+        loop:true,
+        margin:20,
+        dots:false,
+        nav:true,
+>>>>>>> 13a19830f0a27695a1fb7c7a2d0ccde519c3e5bd
         rtl:true,
         autoplaySpeed: 500,
         animateOut:'fadeOut',
@@ -187,5 +217,9 @@ $(function(){
         $('.' + $(this).data('toggle')).fadeIn();
         $('.content').not('.' +$(this).data('toggle')).hide();
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 13a19830f0a27695a1fb7c7a2d0ccde519c3e5bd
     
 });
