@@ -159,7 +159,7 @@ $(function(){
 
     // Owl Section owlHeader
     $('#owlHeader').owlCarousel({
-        rtl:true,
+        rtl:true, 
         autoplaySpeed: 500,
         animateOut:'fadeOut',
         autoplay:true,
