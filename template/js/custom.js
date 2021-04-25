@@ -159,8 +159,6 @@ $(function(){
 
     // Owl Section owlHeader
     $('#owlHeader').owlCarousel({
-<<<<<<< HEAD
-=======
         rtl:true,
         autoplaySpeed: 500,
         animateOut:'fadeOut',
@@ -188,7 +186,6 @@ $(function(){
         margin:20,
         dots:false,
         nav:true,
->>>>>>> 13a19830f0a27695a1fb7c7a2d0ccde519c3e5bd
         rtl:true,
         autoplaySpeed: 500,
         animateOut:'fadeOut',
@@ -217,9 +214,6 @@ $(function(){
         $('.' + $(this).data('toggle')).fadeIn();
         $('.content').not('.' +$(this).data('toggle')).hide();
     });
-<<<<<<< HEAD
-=======
 
->>>>>>> 13a19830f0a27695a1fb7c7a2d0ccde519c3e5bd
     
 });
